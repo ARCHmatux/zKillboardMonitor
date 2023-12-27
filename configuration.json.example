@@ -1,0 +1,69 @@
+
+{
+    "application": {
+        "version": "0.1.0",
+        "name": "zKillboardMonitor",
+        "author": "ARCHmatux"
+    },
+    "zkillboard": {
+        "redisq_url": "https://redisq.zkillboard.com/listen.php?queueID=zKillMon-RAND_QUEUE_NAME_HERE"
+    },
+    "eveesi": {
+        "esi_url": "https://esi.evetech.net/latest/",
+        "esi_datasource": "?datasource=tranquility"
+    },
+    "esicachedb": {
+        "cache_db_path": "/opt/zKillMon/cachedb.sqlite"
+    },
+    "feeds": [
+        {
+            "name": "Headhunter JAX",
+            "feed_type": "entity",
+            "entity": {
+                "entity_type": "character_id",
+                "entity_id": 1312548849
+            },
+            "webhook": "DISCORD_WEBHOOK_HERE",
+            "include_empty_pods": false
+        },
+        {
+            "name": "GoonWaffe",
+            "feed_type": "entity",
+            "entity": {
+                "entity_type": "corporation_id",
+                "entity_id": 667531913
+            },
+            "webhook": "DISCORD_WEBHOOK_HERE",
+            "include_empty_pods": false
+        },
+        {
+            "name": "Goonswarm Federation",
+            "feed_type": "entity",
+            "entity": {
+                "entity_type": "alliance_id",
+                "entity_id": 1354830081
+            },
+            "webhook": "DISCORD_WEBHOOK_HERE",
+            "include_empty_pods": false
+        },
+        {
+            "name": "1DQ1-A",
+            "feed_type": "location",
+            "location": {
+                "location_type": "system_id",
+                "location_id": 30004759
+            },
+            "webhook": "DISCORD_WEBHOOK_HERE",
+            "include_empty_pods": false
+        },
+        {
+            "name": "Capitals",
+            "feed_type": "label",
+            "label": {
+                "zkb_label": "capital"
+            },
+            "webhook": "DISCORD_WEBHOOK_HERE",
+            "include_empty_pods": false
+        }
+    ]
+}
